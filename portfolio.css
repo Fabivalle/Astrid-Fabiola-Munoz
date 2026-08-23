@@ -5,55 +5,53 @@
 }
 
 body {
-  background-color: #0f1115; /* Color del fondo principal (muy oscuro) */
-  color: #ffffff;
-  font-family: 'Cinzel', serif; /* Tipografía estilo clásico/elegante */
+  background-color: #121418; 
+  color: #EAEAEA;
+  font-family: 'Playfair Display', serif; 
 }
 
-/* --- ESTILOS DEL HEADER --- */
+
 .navbar {
   display: flex;
-  justify-content: space-between; /* Distribuye espacio: izquierda, centro y derecha */
-  align-items: center;            /* Centra verticalmente los elementos */
-  background-color: #0f1115;      /* Fondo del header */
-  padding: 25px 50px;             /* Espacio interno (arriba/abajo - izquierda/derecha) */
+  justify-content: space-between; 
+  align-items: center;          
+  background-color: #121418;    
+  padding: 25px 50px;           
 }
 
-/* 1. Estilo del Logo */
+
 .logo img {
-  height: 65px;  /* Ajusta esta altura si quieres el logo más grande o pequeño */
+  height: 188px; 
   width: auto;
   display: block;
 }
 
-/* 2. Estilo del Nombre del Centro */
+
 .brand h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.4rem;        /* Tamaño del texto del centro */
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;       
   font-weight: 400;
-  letter-spacing: 3px;      /* Espacio entre letras para elegancia */
-  color: #e5e5e5;
+  letter-spacing: 3px;     
+  color: #AEAEA;
   text-transform: uppercase;
   text-align: center;
 }
 
-/* 3. Estilo del Menú de Navegación */
 .nav-links ul {
   display: flex;
-  list-style: none; /* Le quita los puntos a la lista <ul> */
-  gap: 25px;        /* Espacio horizontal entre cada enlace */
+  list-style: none; 
+  gap: 25px;       
 }
 
 .nav-links a {
-  text-decoration: none;        /* Quita la línea de subrayado */
-  color: #b0b3b8;               /* Color gris claro de los enlaces */
-  font-family: 'Cinzel', serif;
-  font-size: 0.8rem;            /* Tamaño de letra del menú */
-  letter-spacing: 2px;          /* Espaciado de letras */
-  transition: color 0.3s ease;  /* Transición suave cuando pasas el mouse */
+  text-decoration: none;       
+  color: #b0b3b8;              
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;           
+  letter-spacing: 2px;          
+  transition: color 0.3s ease;  
 }
 
-/* Efecto al pasar el cursor (Hover) */
 .nav-links a:hover {
-  color: #ffffff; /* Se vuelve blanco brillante */
+  color: #ffffff; 
 }
