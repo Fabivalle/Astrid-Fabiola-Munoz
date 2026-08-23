@@ -29,7 +29,7 @@ body {
 
 .brand h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;       
+  font-size: 40px;       
   font-weight: 400;
   letter-spacing: 3px;     
   color: #EAEAEA;
@@ -47,7 +47,7 @@ body {
   text-decoration: none;       
   color: #b0b3b8;              
   font-family: 'Playfair Display', serif;
-  font-size: 0.8rem;           
+  font-size: 16px;           
   letter-spacing: 2px;          
   transition: color 0.3s ease;  
 }
