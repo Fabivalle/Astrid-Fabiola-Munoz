@@ -55,3 +55,90 @@ body {
 .nav-links a:hover {
   color: #ffffff; 
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 24px;                             /* Separación entre tarjetas */
+  padding: 30px 50px 60px 50px;          /* Espaciado interno general */
+  max-width: 1400px;
+  margin: 0 auto;                        /* Centra todo en la pantalla */
+}
+
+/* Estilo general para todas las tarjetas */
+.card {
+  background-color: #23272f;             /* Color grisáceo/azulado de las cajas */
+  border-radius: 24px;                   /* Esquinas redondeadas */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;        /* Imagen arriba y título al fondo */
+  align-items: center;
+  transition: transform 0.3s ease;       /* Animación suave al pasar el mouse */
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);           /* Pequeño salto hacia arriba al pasar el mouse */
+}
+
+/* Imágenes dentro de cada tarjeta */
+.card-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 140px;      /* <-- Límite de altura para que no estire las tarjetas normales */
+  object-fit: contain;
+  margin: auto 0;                      /* Centra verticalmente la imagen */
+}
+
+/* Títulos de las tarjetas */
+.card-title {
+  width: 100%;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #EAEAEA;
+  margin-top: 15px;
+  line-height: 1.3;
+}
+
+/* --- TAMAÑO Y POSICIÓN DE CADA TARJETA --- */
+
+/* 1. Tarjeta Laptop: ocupa 2 columnas y 2 filas */
+.card-laptop {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  min-height: 400px;
+}
+
+/* 2 y 3. Tarjetas pequeñas arriba a la derecha */
+.card-copywriter {
+  grid-column: 3;
+  grid-row: 1;
+  min-height: 230px;
+}
+
+.card-literario {
+  grid-column: 4;
+  grid-row: 1;
+  min-height: 230px;
+}
+
+/* 4. Pichinguitos: ocupa 2 columnas a la derecha */
+.card-pichinguitos {
+  grid-column: 3 / 5;
+  grid-row: 2;
+  min-height: 230px;
+}
+
+/* 5. Laboratorio IA: ocupa 3 columnas abajo */
+.card-ia {
+  grid-column: 1 / 4;
+  grid-row: 3;
+  min-height: 260px;
+}
+
+/* 6. Sobre mí: ocupa la última columna abajo */
+.card-sobre-mi {
+  grid-column: 4;
+  grid-row: 3;
+  min-height: 260px;
