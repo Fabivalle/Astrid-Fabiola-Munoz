@@ -12,11 +12,14 @@ body {
 
 
 .navbar {
-  display: flex;
+ display: flex;
   justify-content: space-between; 
-  align-items: center;          
-  background-color: #121418;    
-  padding: 15px 20px;           
+  align-items: center;           
+  background-color: #121418;  
+  width: 100%;   
+  max-width: 1400px;    /* <-- 1. Mismo ancho máximo que la cuadrícula */
+  margin: 0 auto;   
+  padding: 30px 50px;           
 }
 
 
@@ -60,7 +63,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
   gap: 24px;                             
-  padding: 30px 50px 60px 50px;        
+  padding: 10px 50px 60px 50px;        
   max-width: 1400px;
   margin: 0 auto;                     
 }
