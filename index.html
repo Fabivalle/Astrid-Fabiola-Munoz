@@ -39,7 +39,6 @@
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
-<
     <div class="menu-toggle">
       <i class="fa-solid fa-bars"></i>
     </div>
@@ -96,5 +95,13 @@
   
     <p class="copyright">&copy; Astrid Fabiola Muñoz Valeccillo</p>
   </footer>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
