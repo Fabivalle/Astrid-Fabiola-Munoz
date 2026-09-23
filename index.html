@@ -3,31 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Astrid Fabiola Muñoz</title>
+  <title>Astrid Fabiola Muñoz</title> 
   
- 
+  <!-- ENLACE AL ARCHIVO CSS (Así se conecta HTML con tu CSS) -->
   <link rel="stylesheet" href="portfolio.css">
 
- 
+  <!-- Fuente tipográfica elegante desde Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<!-- Librería para los íconos de redes sociales -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
 <body>
+
+  <!-- HEADER / BARRA DE NAVEGACIÓN -->
   <header class="navbar">
+    
+    <!-- 1. LOGO A LA IZQUIERDA -->
     <div class="logo">
      
       <img src="imagenes/logo.png" alt="Logo Astrid Fabiola Muñoz">
     </div>
 
-   
+    <!-- 2. NOMBRE AL CENTRO -->
     <div class="brand">
       <h1>ASTRID FABIOLA MUÑOZ</h1>
     </div>
 
-   
+    <!-- 3. MENÚ DE NAVEGACIÓN A LA DERECHA -->
     <nav class="nav-links">
       <ul>
         <li><a href="#work">WORK</a></li>
@@ -37,51 +41,55 @@
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
+    
+    <!-- 4. BOTÓN HAMBURGUESA (Para celulares) -->
     <div class="menu-toggle">
       <i class="fa-solid fa-bars"></i>
     </div>
-  </header>
 
+  </header>
+  <!-- SECCIÓN PRINCIPAL: CUADRÍCULA DE PROYECTOS -->
   <main class="grid-container">
     
-    <div class="card card-laptop">
-      <img src="imagenes/laptop.png" alt="Product designer" class="card-img">
-      <p class="card-title">Product designer - UX/UI Designer</p>
-    </div>
+    <!-- 1. Tarjeta Product Designer (Grande) -->
+    <a href="product-designer.html" class="card card-laptop">
+  <img src="imagenes/laptop.png" alt="Product designer" class="card-img">
+  <p class="card-title">Product designer - UX/UI Designer</p>
+</a>
 
-   
+    <!-- 2. Tarjeta Copywriter -->
     <div class="card card-copywriter">
       <img src="imagenes/copywriter.png" alt="Copywriter" class="card-img">
       <p class="card-title">Copywriter/<br>correctora de estilo</p>
     </div>
 
-   
+    <!-- 3. Tarjeta Universo Literario -->
     <div class="card card-literario">
       <img src="imagenes/libros.png" alt="Universo literario" class="card-img">
       <p class="card-title">Universo literario</p>
     </div>
 
-  
+    <!-- 4. Tarjeta Pichinguitos -->
     <div class="card card-pichinguitos">
       <img src="imagenes/pichinguitos.png" alt="Pichinguitos" class="card-img">
       <p class="card-title">Pichinguitos</p>
     </div>
 
-  
+    <!-- 5. Tarjeta Laboratorio IA (Ancha) -->
     <div class="card card-ia">
       <img src="imagenes/ia-video.png" alt="Laboratorio IA y video" class="card-img">
       <p class="card-title">Laboratorio IA y video</p>
     </div>
 
-  
+    <!-- 6. Tarjeta Sobre mí (Ajedrez) -->
     <div class="card card-sobre-mi">
       <img src="imagenes/ajedrez.png" alt="Sobre mi" class="card-img">
       <p class="card-title">Sobre mi</p>
     </div>
 
  </main>
-  <footer class="footer">
-   
+ <footer class="footer">
+    <!-- Íconos de redes sociales -->
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/astrid-fabiola-mu%C3%B1oz-0488ab83/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
       <a href="https://behance.net" target="_blank" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
@@ -90,9 +98,10 @@
       <a href="https://dribbble.com" target="_blank" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
     </div>
 
-  
+    <!-- Texto de Copyright -->
     <p class="copyright">&copy; Astrid Fabiola Muñoz Valeccillo</p>
   </footer>
+  !-- SCRIPT PARA ABRIR Y CERRAR EL MENÚ EN CELULARES -->
   <script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
