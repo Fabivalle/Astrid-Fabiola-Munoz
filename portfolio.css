@@ -194,85 +194,6 @@ body {
   font-size: 26px;
   cursor: pointer;
 }
-@media (max-width: 768px) {
-  
-  /* 1. Header en celular */
-  .navbar {
-    padding: 15px 20px;       /* Menos margen a los lados */
-  }
-
-  .logo img {
-    height: 48px;             /* Logo más pequeño y proporcionado */
-  }
-
-  .brand h1 {
-    font-size: 16px;          /* Letra reducida para que quede en 1 sola línea */
-    letter-spacing: 1.2px;
-  }
-
-  .nav-links {
-    display: none;            /* Oculta los enlaces de texto */
-  }
-
-  .menu-toggle {
-    display: block;           /* Muestra el icono de 3 líneas (☰) */
-  }
-
-  /* 2. Tarjetas apiladas en 1 sola columna hacia abajo */
-  .grid-container {
-    grid-template-columns: 1fr;  /* Convierte la cuadrícula en 1 columna */
-    padding: 10px 20px 40px 20px;
-    gap: 20px;
-  }
-
-  /* Reinicia el tamaño de todas las tarjetas para que midan igual */
-  .card-laptop,
-  .card-copywriter,
-  .card-literario,
-  .card-pichinguitos,
-  .card-ia,
-  .card-sobre-mi {
-    grid-column: auto;
-    grid-row: auto;
-    min-height: 250px;
-  }
-
-  .card-img,
-  .card-laptop .card-img {
-    max-height: 150px;
-  }
-  /* Asegura que el header permita posicionar el menú desplegable */
-  .navbar {
-    position: relative;
-  }
-
-  /* Cómo se ve el menú cuando le das clic y se abre */
-  .nav-links.active {
-    display: flex;
-    position: absolute;
-    top: 100%;             /* Aparece justo debajo de la barra */
-    left: 0;
-    width: 100%;
-    background-color: #121418;
-    padding: 25px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 100;          /* Hace que quede por encima de las tarjetas */
-  }
-
-  /* Pone los enlaces uno debajo de otro */
-  .nav-links.active ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-  }
-  /* Ajuste para la página de proyectos en celulares */
-  .projects-grid {
-    grid-template-columns: 1fr;
-    padding: 0 20px 40px 20px;
-  }
-} 
-
 /* =========================================
    PÁGINA INTERNA: PRODUCT DESIGN & UI/UX
    ========================================= */
@@ -389,3 +310,91 @@ body {
 .case-study-link:hover {
   color: #ffffff;
 }
+@media (max-width: 768px) {
+  
+  /* 1. Header en celular */
+  .navbar {
+    padding: 15px 20px;       /* Menos margen a los lados */
+  }
+
+  .logo img {
+    height: 48px;             /* Logo más pequeño y proporcionado */
+  }
+
+  .brand h1 {
+    font-size: 16px;          /* Letra reducida para que quede en 1 sola línea */
+    letter-spacing: 1.2px;
+  }
+
+  .nav-links {
+    display: none;            /* Oculta los enlaces de texto */
+  }
+
+  .menu-toggle {
+    display: block;           /* Muestra el icono de 3 líneas (☰) */
+  }
+
+  /* 2. Tarjetas apiladas en 1 sola columna hacia abajo */
+  .grid-container {
+    grid-template-columns: 1fr;  /* Convierte la cuadrícula en 1 columna */
+    padding: 10px 20px 40px 20px;
+    gap: 20px;
+  }
+
+  /* Reinicia el tamaño de todas las tarjetas para que midan igual */
+  .card-laptop,
+  .card-copywriter,
+  .card-literario,
+  .card-pichinguitos,
+  .card-ia,
+  .card-sobre-mi {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 250px;
+  }
+
+  .card-img,
+  .card-laptop .card-img {
+    max-height: 150px;
+  }
+  /* Asegura que el header permita posicionar el menú desplegable */
+  .navbar {
+    position: relative;
+  }
+
+  /* Cómo se ve el menú cuando le das clic y se abre */
+  .nav-links.active {
+    display: flex;
+    position: absolute;
+    top: 100%;             /* Aparece justo debajo de la barra */
+    left: 0;
+    width: 100%;
+    background-color: #121418;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 100;          /* Hace que quede por encima de las tarjetas */
+  }
+
+  /* Pone los enlaces uno debajo de otro */
+  .nav-links.active ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+ /* Convierte la cuadrícula de proyectos a 1 sola columna */
+  .projects-grid {
+    grid-template-columns: 1fr;   /* <-- 1 solo cuadro a lo ancho */
+    padding: 0 20px 40px 20px;
+    gap: 20px;
+  }
+
+  /* Ajusta el tamaño de la letra de introducción en celular para que no ocupe tanto espacio */
+  .intro-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+} 
+
