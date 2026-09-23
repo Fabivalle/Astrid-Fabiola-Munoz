@@ -12,89 +12,92 @@ body {
 
 
 .navbar {
- display: flex;
+  display: flex;
   justify-content: space-between; 
   align-items: center;           
   background-color: #121418;  
   width: 100%;   
   max-width: 1400px;    /* <-- 1. Mismo ancho máximo que la cuadrícula */
   margin: 0 auto;   
-  padding: 30px 50px;           
+  padding: 30px 50px;        
 }
 
 
 .logo img {
-  height: 150px; 
+  height: 150px;  
   width: auto;
   display: block;
 }
 
-
+/* 2. Estilo del Nombre del Centro */
 .brand h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 40px;       
+  font-family:'Playfair Display', serif; 
+', serif;
+  font-size: 40px;        /* Tamaño del texto del centro */
   font-weight: 400;
-  letter-spacing: 1.5px;     
+  letter-spacing: 1.5px;      /* Espacio entre letras para elegancia */
   color: #EAEAEA;
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
 }
 
+/* 3. Estilo del Menú de Navegación */
 .nav-links ul {
   display: flex;
-  list-style: none; 
-  gap: 12px;       
+  list-style: none; /* Le quita los puntos a la lista <ul> */
+  gap: 12px;        /* Espacio horizontal entre cada enlace */
 }
 
 .nav-links a {
-  text-decoration: none;       
-  color: #b0b3b8;              
+  text-decoration: none;        /* Quita la línea de subrayado */
+  color: #EAEAEA;               /* Color gris claro de los enlaces */
   font-family: 'Playfair Display', serif;
-  font-size: 16px;           
-  letter-spacing: 2px;          
-  transition: color 0.3s ease;  
+  font-size: 16px;            /* Tamaño de letra del menú */
+  letter-spacing: 2px;          /* Espaciado de letras */
+  transition: color 0.3s ease;  /* Transición suave cuando pasas el mouse */
 }
 
+/* Efecto al pasar el cursor (Hover) */
 .nav-links a:hover {
-  color: #ffffff; 
+  color: #ffffff; /* Se vuelve blanco brillante */
 }
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 24px;                             
-  padding: 10px 50px 60px 50px;        
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 24px;                             /* Separación entre tarjetas */
+  padding: 10px 50px 60px 50px;          /* Espaciado interno general */
   max-width: 1400px;
-  margin: 0 auto;                     
+  margin: 0 auto;                        /* Centra todo en la pantalla */
 }
 
-
+/* Estilo general para todas las tarjetas */
 .card {
-  background-color: #23272f;             
-  border-radius: 24px;                  
+  background-color: #23272f;             /* Color grisáceo/azulado de las cajas */
+  border-radius: 24px;                   /* Esquinas redondeadas */
   padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;       
+  justify-content: space-between;        /* Imagen arriba y título al fondo */
   align-items: center;
-  transition: transform 0.3s ease;       
+  transition: transform 0.3s ease;       /* Animación suave al pasar el mouse */
   cursor: pointer;
 }
 
 .card:hover {
-  transform: translateY(-4px);          
+  transform: translateY(-4px);           /* Pequeño salto hacia arriba al pasar el mouse */
 }
 
-
+/* Imágenes dentro de cada tarjeta */
 .card-img {
   max-width: 100%;
   height: auto;
-  max-height: 140px;     
+  max-height: 140px;      /* <-- Límite de altura para que no estire las tarjetas normales */
   object-fit: contain;
-  margin: auto 0;                    
+  margin: auto 0;                      /* Centra verticalmente la imagen */
 }
 
-
+/* Títulos de las tarjetas */
 .card-title {
   width: 100%;
   text-align: left;
@@ -105,14 +108,16 @@ body {
   line-height: 1.3;
 }
 
+/* --- TAMAÑO Y POSICIÓN DE CADA TARJETA --- */
 
+/* 1. Tarjeta Laptop: ocupa 2 columnas y 2 filas */
 .card-laptop {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
   min-height: 400px;
 }
 
-
+/* 2 y 3. Tarjetas pequeñas arriba a la derecha */
 .card-copywriter {
   grid-column: 3;
   grid-row: 1;
@@ -125,27 +130,28 @@ body {
   min-height: 230px;
 }
 
-
+/* 4. Pichinguitos: ocupa 2 columnas a la derecha */
 .card-pichinguitos {
   grid-column: 3 / 5;
   grid-row: 2;
   min-height: 230px;
 }
 
-
+/* 5. Laboratorio IA: ocupa 3 columnas abajo */
 .card-ia {
   grid-column: 1 / 4;
   grid-row: 3;
   min-height: 260px;
 }
 
-
+/* 6. Sobre mí: ocupa la última columna abajo */
 .card-sobre-mi {
   grid-column: 4;
   grid-row: 3;
   min-height: 260px;
   }
-.footer {
+
+  .footer {
   display: flex;
   flex-direction: column;
   align-items: center;     /* Centra los íconos y el texto horizontalmente */
@@ -154,11 +160,33 @@ body {
   gap: 20px;               /* Espacio entre los íconos y el texto de copyright */
 }
 
-
+/* Contenedor de íconos */
 .social-icons {
   display: flex;
   gap: 24px;               /* Separación entre cada ícono */
   align-items: center;
+}
+
+/* Estilo de cada ícono */
+.social-icons a {
+  color: #EAEAEA;          /* Color claro de los íconos */
+  font-size: 24px;         /* Tamaño de los íconos */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.social-icons a:hover {
+  color: #ffffff;
+  transform: translateY(-3px); /* Se elevan ligeramente */
+} 
+
+/* Texto de copyright */
+.copyright {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  color: #EAEAEA;
+  letter-spacing: 0.5px;
 }
 .menu-toggle {
   display: none;
@@ -168,36 +196,36 @@ body {
 }
 @media (max-width: 768px) {
   
-
+  /* 1. Header en celular */
   .navbar {
-    padding: 15px 20px;      
+    padding: 15px 20px;       /* Menos margen a los lados */
   }
 
   .logo img {
-    height: 48px;            
+    height: 48px;             /* Logo más pequeño y proporcionado */
   }
 
   .brand h1 {
-    font-size: 16px;         
+    font-size: 16px;          /* Letra reducida para que quede en 1 sola línea */
     letter-spacing: 1.2px;
   }
 
   .nav-links {
-    display: none;           
+    display: none;            /* Oculta los enlaces de texto */
   }
 
   .menu-toggle {
-    display: block;          
+    display: block;           /* Muestra el icono de 3 líneas (☰) */
   }
 
-
+  /* 2. Tarjetas apiladas en 1 sola columna hacia abajo */
   .grid-container {
     grid-template-columns: 1fr;  /* Convierte la cuadrícula en 1 columna */
     padding: 10px 20px 40px 20px;
     gap: 20px;
   }
 
- 
+  /* Reinicia el tamaño de todas las tarjetas para que midan igual */
   .card-laptop,
   .card-copywriter,
   .card-literario,
@@ -213,29 +241,151 @@ body {
   .card-laptop .card-img {
     max-height: 150px;
   }
-  
+  /* Asegura que el header permita posicionar el menú desplegable */
   .navbar {
     position: relative;
   }
 
-
+  /* Cómo se ve el menú cuando le das clic y se abre */
   .nav-links.active {
     display: flex;
     position: absolute;
-    top: 100%;            
+    top: 100%;             /* Aparece justo debajo de la barra */
     left: 0;
     width: 100%;
     background-color: #121418;
     padding: 25px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 100;         
+    z-index: 100;          /* Hace que quede por encima de las tarjetas */
   }
 
+  /* Pone los enlaces uno debajo de otro */
   .nav-links.active ul {
     flex-direction: column;
     align-items: center;
     gap: 20px;
     width: 100%;
   }
+  /* Ajuste para la página de proyectos en celulares */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px 40px 20px;
+  }
+} 
 
+/* =========================================
+   PÁGINA INTERNA: PRODUCT DESIGN & UI/UX
+   ========================================= */
+
+/* Texto introductorio */
+.intro-section {
+  max-width: 950px;
+  margin: 10px auto 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.intro-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #EAEAEA;
+}
+
+/* Cuadrícula 2x2 */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 24px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px 60px 50px;
+}
+
+/* Tarjeta de proyecto */
+.project-card {
+  background-color: #23272f;
+  border-radius: 24px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 440px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Tarjetas vacías (placeholders) */
+.project-card.placeholder {
+  background-color: #23272f;
+  min-height: 440px;
+}
+
+/* Contenedor de la imagen mockup */
+.project-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+/* Textos dentro de la tarjeta */
+.project-info h3 {
+  font-family:'Playfair Display', sans-serif; 
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #EAEAEA;
+  margin-bottom: 18px;
+}
+
+/* Botoncitos de etiquetas (Tags) */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  background-color: #1a1d24;
+  color: #e07a5f;              /* Color naranja/coral sutil como tu diseño */
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(224, 122, 95, 0.2);
+}
+
+/* Enlace "Ver caso de estudio" */
+.case-study-link {
+  display: block;
+  text-align: right;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #cfd2d8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.case-study-link:hover {
+  color: #ffffff;
 }
